@@ -20,14 +20,14 @@ public class FortuneTellerFrame extends JFrame
         mainPnl = new JPanel();
         mainPnl.setLayout(new BorderLayout());
         add(mainPnl);
-        createTitlePanel();
         createDisplayPanel();
+        createTitlePanel();
         createControlPanel();
 
-        setTitle("Fortune Teller");
-        setSize(550, 650);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
+            setTitle("Fortune Teller");
+            setSize(550, 650);
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setVisible(true);
     }
 
     private void loadFortunes()
@@ -58,7 +58,7 @@ public class FortuneTellerFrame extends JFrame
         titleLbl.setVerticalTextPosition(JLabel.BOTTOM);
 
         titlePnl.add(titleLbl);
-        mainPnl.add(displayPnl, BorderLayout.CENTER);
+        mainPnl.add(titlePnl, BorderLayout.NORTH);
     }
 
     public void createDisplayPanel()
@@ -94,4 +94,6 @@ public class FortuneTellerFrame extends JFrame
         cmdPnl.add(quitBtn);
         mainPnl.add(cmdPnl, BorderLayout.SOUTH);
     }
+
+
 }
